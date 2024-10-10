@@ -1,21 +1,38 @@
 
 .landing-page {
-    text-align:center;
-    background-image: linear-gradient(#FBE0E5, #FFF7F7 50%);
-    height: 100vh;
+text-align:center;
+background-image: linear-gradient(#FBE0E5, #FFF7F7 50%);
+height: 100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding: 0;
+}
+
+.about {
+    background-color: var(--pink-med);
     display:flex;
     flex-direction:column;
-    justify-content:center;
-  }
-  
-  .name {
-    font-size:8em;
-    letter-spacing:1em;
-    margin: 0 0 0 1em;
-    padding:0;
-  }
 
-  
-  .projects {
-    min-height: 100vh;
-  }
+}
+
+#about-header {
+    text-align:left;
+}
+
+#about-content {
+    text-align:right;
+}
+
+
+.name {
+font-size:8em;
+letter-spacing:1em;
+margin: 0 0 0 1em;
+padding:0;
+}
+
+
+.projects {
+min-height: 100vh;
+}

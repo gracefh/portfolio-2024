@@ -11,13 +11,14 @@
   }
 
   .down-arrow-wrapper {
-    
+    transition: var(--transition-hover);
     &:hover * {
-        border-color: #E68B8B;
+        border-color: var(--pink-darker);
+        transition: var(--transition-hover);
     }
-
     &:hover *:after {
-        border-color: #E68B8B;
+        border-color: var(--pink-darker);
+        transition: var(--transition-hover);
     }
   }
 

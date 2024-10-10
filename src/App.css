@@ -1,14 +1,77 @@
-html, body {    
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
 main {
   text-align:center;
+}
+
+section {
+  padding: 5em 10vw;
 }
 
 .rubik-mono-one-regular {
   font-family: "Rubik Mono One", monospace;
   font-weight: 400;
   font-style: normal;
+}
+
+.instrument-sans-landing {
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  letter-spacing:.2em;
+}
+
+
+
+.instrument-sans-header {
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  letter-spacing:1em;
+  font-size:var(--text-med);
+}
+
+.instrument-sans-400 {
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.instrument-sans-500 {
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  letter-spacing:2px;
+}
+
+.instrument-sans-600 {
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.instrument-sans-700 {
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.text-white {
+  color: var(--primary-white);
 }
