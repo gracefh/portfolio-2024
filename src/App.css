@@ -1,0 +1,14 @@
+html, body {    
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+main {
+  text-align:center;
+}
+
+.rubik-mono-one-regular {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+}

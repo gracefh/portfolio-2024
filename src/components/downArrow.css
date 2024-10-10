@@ -1,0 +1,49 @@
+@keyframes jump {
+    0% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: 20px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+
+  .down-arrow-wrapper {
+    
+    &:hover * {
+        border-color: #E68B8B;
+    }
+
+    &:hover *:after {
+        border-color: #E68B8B;
+    }
+  }
+
+.down-arrow {
+    position: absolute;
+    top: calc(100vh - 120px);
+    left: calc(50% - 14px);
+    width: 0;
+    height: 50px;
+    border: 2px solid;
+    border-radius: 4px;
+    animation: jump ease-in-out 1.5s infinite;
+
+  }
+  
+  .down-arrow:after {
+    content: " ";
+    position: absolute;
+    top: 32px;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    border-radius: 4px;
+    transform: rotateZ(45deg);
+  }
+
+  
