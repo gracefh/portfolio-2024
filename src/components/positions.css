@@ -1,6 +1,4 @@
 .role {
-    width: 20vw;
-    min-width:15em;
     font-size: var(--text-med);
     background: none;
     border: none;

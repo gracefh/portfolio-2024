@@ -1,0 +1,35 @@
+.project-cards-wrapper {
+    display:flex;
+    flex-direction:column;
+    gap:3em;
+}
+
+.project-card {
+    background-image: var(--gradient-pink-secondary);
+    padding:2em;
+    border-radius: 2em;
+    width:calc(200%/3);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+
+    & .content {
+        display:none;
+    }
+    &:hover {
+        width: 100%;
+        transition: var(--transition-hover);
+
+        & .content {
+            display:inherit;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 900px) {
+    .project-card  {
+      width:100%;
+    }
+  }

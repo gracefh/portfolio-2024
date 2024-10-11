@@ -6,6 +6,10 @@ section {
   padding: 5em 10vw;
 }
 
+p {
+  line-height:150%;
+}
+
 .rubik-mono-one-regular {
   font-family: "Rubik Mono One", monospace;
   font-weight: 400;
@@ -13,65 +17,81 @@ section {
 }
 
 .instrument-sans-landing {
-  font-family: "Instrument Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
   letter-spacing:.2em;
 }
 
-
-
-.instrument-sans-header {
-  font-family: "Instrument Sans", sans-serif;
-  font-optical-sizing: auto;
+.header-small {
   font-weight: 500;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
   letter-spacing:1em;
   font-size:var(--text-med);
 }
 
+
+.header-med {
+  font-weight: 500;
+  letter-spacing:1em;
+  font-size:var(--text-lg);
+}
+
+
 .instrument-sans-400 {
-  font-family: "Instrument Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
 }
 
 .instrument-sans-500 {
-  font-family: "Instrument Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 500;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
   letter-spacing:2px;
 }
 
 .instrument-sans-600 {
-  font-family: "Instrument Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 600;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
 }
 
 .instrument-sans-700 {
-  font-family: "Instrument Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 700;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
 }
 
 .text-white {
   color: var(--primary-white);
+}
+
+.text-pink {
+  color: var(--pink-darker);
+}
+
+.text-black {
+  color: var(--primary-black);
+}
+
+.width-50 {
+  width:50%;
+}
+
+.responsive-width-50 {
+  width: 50%;
+}
+
+@media screen and (max-width: 900px) {
+  .responsive-width-50 {
+    width:100%;
+  }
+}
+
+.width-100 {
+  width:100%;
+}
+
+.section-flex {
+  display:flex;
+  flex-direction:column;
+  gap: 5em;
+}
+
+.align-self-end {
+  align-self: flex-end;
+}
+
+.align-self-start {
+  align-self: flex-start;
 }

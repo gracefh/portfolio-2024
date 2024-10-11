@@ -2,6 +2,7 @@ import React from "react"
 import { DownArrow } from "../components/downArrow"
 import "./home.css"
 import { Positions } from "../components/positions";
+import { ProjectCards } from "../components/projectCards";
 
 const HomeImpl = () => {
 
@@ -19,17 +20,25 @@ const HomeImpl = () => {
             <DownArrow handleClick={handleClick}/>
         </section>
         <section className="about" ref={ref}>
-            <div id="about-header">
-            <h2 className="text-white instrument-sans-header">ABOUT</h2>
+            <div className="about-header">
+            <h2 className="text-white header-small">ABOUT</h2>
             </div>
-            <div id="about-content">
-                <p className="instrument-sans-500">
-                    hello! I'm Grace, a full-stack engineer at Uncountable
+            <div className="about-content responsive-width-50 align-self-end">
+                <p className="instrument-sans-500 text-black">
+                    Hello! I'm Grace, and I'm currently working a full-stack engineer at Uncountable. 
+                    Before that, I graduated with a BS and MEng in Computer Science and Engineering from MIT in 2024.
+                    While there, I did research in MIT's Visualization Group, sang a cappella, and practice taekwondo.
+                    I enjoy building software (hence the existence of this page!), learning about UI/UX design, and 
+                    thinking about human computer interactions, especially in the data visualization area. 
+                    Outside of work, you can find me baking a variety of desserts, making music, drawing on Procreate or in margins of notebooks, or exploring San Francisco!
                 </p>
             </div>
         </section>
-        <section className="projects">
-
+        <section className="projects section-flex">
+            <div>
+                <h2 className="text-pink header-med">PROJECTS</h2>
+            </div>
+            <ProjectCards/>
         </section>
     </main>
 }
