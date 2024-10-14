@@ -1,0 +1,29 @@
+.nav-bar-wrapper {
+    position:sticky;
+    top: 3em;
+    height:0;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+}
+
+.nav-bar {
+    display:flex;
+    gap: 2em;
+    justify-content:center;
+    align-items:center;
+    padding: 2em 4em;
+    background-color:rgba(255, 255, 255, 0.5);
+    border-radius:4em;
+}
+
+.nav-link {
+  color: var(--pink-darker);
+  &:hover {
+    color: var(--primary-black);
+  }
+
+  .active {
+    color: var(--pink-darker);
+  }
+}

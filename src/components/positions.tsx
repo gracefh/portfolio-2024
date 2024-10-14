@@ -4,7 +4,8 @@ import "./positions.css"
 enum PossibleRoles {
     FULL_STACK_ENGINEER = "full-stack engineer",
     ARTIST = "artist",
-    BOBA_ENJOYER = "boba enjoyer"
+    BOBA_ENJOYER = "boba enjoyer",
+    MIT = "MIT Class of 2024"
 }
 
 const possibleRolesList = [PossibleRoles.FULL_STACK_ENGINEER, PossibleRoles.ARTIST, PossibleRoles.BOBA_ENJOYER]

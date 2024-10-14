@@ -13,6 +13,9 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   transition: var(--transition-hover);
+  display:flex;
+  flex-direction:column;
+  gap: 2em;
 
   & .content {
     display: none;

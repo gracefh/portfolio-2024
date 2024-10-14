@@ -33,3 +33,11 @@
 .projects {
   min-height: 100vh;
 }
+
+.error-page-wrapper {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}

@@ -20,8 +20,8 @@ export const ProjectCard = (props: ProjectCardProps) => {
       key={ind}
     >
       <div>
-        <div>{title}</div>
-        <div>{date}</div>
+        <div className="card-header project-title">{title}</div>
+        <div className="subtitle project-date">{date}</div>
       </div>
       {imageLink != "" ? <img
           className={"project-preview"}
