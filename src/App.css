@@ -49,9 +49,14 @@ p {
   font-weight: 400;
 }
 
-.instrument-sans-500 {
+.instrument-sans-500-spaced {
   font-weight: 500;
   letter-spacing:2px;
+}
+
+
+.instrument-sans-500-normal {
+  font-weight: 500;
 }
 
 .instrument-sans-600 {

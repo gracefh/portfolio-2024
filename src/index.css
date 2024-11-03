@@ -6,7 +6,7 @@ body {
   --pink-lighter: #FBE0E5;
   --pink-med: #f7c3c3;
   --pink-darker: #e99393;
-  --primary-black: #000;
+  --primary-black: #1f1717;
   --primary-white: #FFF7F7;
 
   --transition-hover: all .25s ease;
@@ -20,6 +20,7 @@ body {
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
+  color: var(--primary-black);
 }
 
 html, body {    

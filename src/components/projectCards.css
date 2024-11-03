@@ -16,6 +16,7 @@
   display:flex;
   flex-direction:column;
   gap: 2em;
+  align-items:center;
 
   & .content {
     display: none;
@@ -24,7 +25,6 @@
   &:hover {
     width: 100%;
     transition: var(--transition-hover);
-    padding-bottom: 5em;
 
     & .content {
       display: inherit;
@@ -32,12 +32,19 @@
   }
 
   & .project-preview {
-    max-width: 100%;
+    max-width: min(35em, 100%);
   }
 }
 
 @media screen and (max-width: 900px) {
   .project-card {
     width: 100%;
+    padding-left: 5em;
+    padding-right: 5em;
   }
+}
+
+
+.content-wrapper {
+  max-width:35em;
 }
