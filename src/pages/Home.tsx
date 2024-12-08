@@ -2,7 +2,7 @@ import React from "react";
 import { DownArrow } from "../components/downArrow";
 import "./pages.css";
 import { Positions } from "../components/positions";
-import { ProjectCards } from "../components/projectCards";
+import { HomeProjectSection, ProjectCards } from "../components/projectCards";
 import { NavBar } from "../layout/navBar";
 import { Footer } from "../layout/footer";
 
@@ -41,13 +41,7 @@ const HomeImpl = () => {
           </p>
         </div>
       </section>
-      <section className="projects section-flex">
-        <div>
-          <h2 className="text-pink header-lg">PROJECTS</h2>
-          {/* <i>what I've worked on!</i> */}
-        </div>
-        <ProjectCards />
-      </section>
+      <HomeProjectSection />
       <Footer/>
     </main>
   );

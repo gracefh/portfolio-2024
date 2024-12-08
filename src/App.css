@@ -12,6 +12,17 @@ section {
 
 p {
   line-height:150%;
+  text-align:left;
+}
+
+button {
+  border: none;
+  font:inherit;
+  background-color:inherit;
+}
+
+a {
+  color:inherit;
 }
 
 .rubik-mono-one-regular {
@@ -106,7 +117,7 @@ p {
 .section-flex {
   display:flex;
   flex-direction:column;
-  gap: 5em;
+  gap: 2em;
 }
 
 .align-self-end {

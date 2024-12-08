@@ -1,8 +1,10 @@
 import { mainProjects } from "../data/mainProjectData";
 import "./projectCards.css";
-import { AnimatePresence, motion } from "framer-motion";
-import { useCallback, useState } from "react";
-import { standardEaseTransition } from "../utils/motion_utils";
+import { motion } from "framer-motion";
+import {
+  standardEaseTransition,
+  standardSpringTransition,
+} from "../utils/motion_utils";
 
 export type ProjectCardProps = {
   ind: number;
@@ -15,64 +17,90 @@ export type ProjectCardProps = {
 
 export const ProjectCard = (props: ProjectCardProps) => {
   const { ind, title, date, imageLink, description, route } = props;
-  const [isHover, setIsHover] = useState(false);
 
-  const toggleHover = useCallback(
-    (hover: boolean) => {
-      setIsHover(hover);
-    },
-    [setIsHover]
-  );
   return (
-    <motion.div
-      className={`project-card ${
-        ind % 2 == 0 ? "align-self-end" : "align-self-start"
-      }`}
-      whileHover={{ scale: 1.1 }}
-      layout
-      transition={standardEaseTransition}
-      onHoverStart={() => toggleHover(true)}
-      onHoverEnd={() => toggleHover(false)}
-    >
+    <motion.div className={`project-card`}>
       <motion.div>
         <div className="section-header project-title">{title}</div>
         <div className="subtitle project-date">{date}</div>
       </motion.div>
 
       {imageLink != "" ? (
-        <motion.img
-          className={"project-preview"}
-          src={imageLink}
-          alt={`${title} project preview`}
-        ></motion.img>
+        <center>
+          <motion.img
+            className={"project-preview"}
+            src={imageLink}
+            alt={`${title} project preview`}
+            whileHover={{ scale: 1.1 }}
+            layout
+            transition={standardSpringTransition}
+          ></motion.img>
+        </center>
       ) : (
         <></>
       )}
-      <AnimatePresence>
-        {/* {isHover && ( */}
-        <motion.div
-          className="content-wrapper"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1.5 }}
-        >
-          <div className="content instrument-sans-500-normal text-black">
-            {description}
-          </div>
-        </motion.div>
-        {/* )} */}
-      </AnimatePresence>
+      <p className="instrument-sans-400 text-black">{description}</p>
     </motion.div>
   );
 };
 
 export const ProjectCards = () => {
   return (
-    <motion.div className="project-cards-wrapper" layout>
+    <motion.div className="two-column-layout" layoutRoot>
       {mainProjects.map((mainProject, ind) => (
         <ProjectCard ind={ind} {...mainProject} key={ind} />
       ))}
     </motion.div>
+  );
+};
+
+const containerMotion = {
+  hover: {
+    backgroundColor: "#f7c3c3",
+  }
+}
+const arrowMotion = {
+  rest: {
+    x: 0,
+    transition: {
+      duration: .8,
+      ease: "easeInOut"
+    }
+  },
+  hover: {
+    x: [0, 15, 0],
+    transition: {
+      repeat: Infinity,
+      duration: .8,
+      delay:.5,
+      ease: "easeInOut"
+    }
+  }
+};
+
+const AllProjectsBar = () => {
+  return (
+    <motion.a
+      layout
+      initial="rest"
+      whileHover="hover"
+      className="all-projects-link instrument-sans-500-normal"
+      href="/projects"
+      variants={containerMotion}
+    >
+      <div>All Projects</div>
+      <motion.div variants={arrowMotion}><i className="fa fa-solid fa-arrow-right-long"></i>
+      </motion.div>
+    </motion.a>
+  );
+};
+
+export const HomeProjectSection = () => {
+  return (
+    <section className="projects section-flex">
+      <h2 className="text-pink header-lg">PROJECTS</h2>
+      <ProjectCards />
+      <AllProjectsBar />
+    </section>
   );
 };
