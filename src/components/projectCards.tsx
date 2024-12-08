@@ -2,6 +2,7 @@ import { mainProjects } from "../data/mainProjectData";
 import "./projectCards.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useState } from "react";
+import { standardEaseTransition } from "../utils/motion_utils";
 
 export type ProjectCardProps = {
   ind: number;
@@ -27,11 +28,14 @@ export const ProjectCard = (props: ProjectCardProps) => {
       className={`project-card ${
         ind % 2 == 0 ? "align-self-end" : "align-self-start"
       }`}
+      whileHover={{ scale: 1.1 }}
+      layout
+      transition={standardEaseTransition}
       onHoverStart={() => toggleHover(true)}
       onHoverEnd={() => toggleHover(false)}
     >
-      <motion.div layout>
-        <div className="card-header project-title">{title}</div>
+      <motion.div>
+        <div className="section-header project-title">{title}</div>
         <div className="subtitle project-date">{date}</div>
       </motion.div>
 
@@ -40,26 +44,24 @@ export const ProjectCard = (props: ProjectCardProps) => {
           className={"project-preview"}
           src={imageLink}
           alt={`${title} project preview`}
-          layout
         ></motion.img>
       ) : (
         <></>
       )}
       <AnimatePresence>
-        {isHover && (
-          <motion.div
-            className="content-wrapper"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.5 }}
-            layout
-          >
-            <div className="content instrument-sans-500-normal text-black">
-              {description}
-            </div>
-          </motion.div>
-        )}
+        {/* {isHover && ( */}
+        <motion.div
+          className="content-wrapper"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.5 }}
+        >
+          <div className="content instrument-sans-500-normal text-black">
+            {description}
+          </div>
+        </motion.div>
+        {/* )} */}
       </AnimatePresence>
     </motion.div>
   );
@@ -67,10 +69,10 @@ export const ProjectCard = (props: ProjectCardProps) => {
 
 export const ProjectCards = () => {
   return (
-    <div className="project-cards-wrapper">
+    <motion.div className="project-cards-wrapper" layout>
       {mainProjects.map((mainProject, ind) => (
         <ProjectCard ind={ind} {...mainProject} key={ind} />
       ))}
-    </div>
+    </motion.div>
   );
 };

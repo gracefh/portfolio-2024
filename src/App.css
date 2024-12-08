@@ -3,7 +3,11 @@ main {
 }
 
 section {
-  padding: 5em 10vw;
+  padding: 5em 15vw;
+
+  &:first-of-type {
+    padding-top: 10em;
+  }
 }
 
 p {
@@ -34,11 +38,12 @@ p {
   font-size:var(--text-lg);
 }
 
-.card-header {
+.section-header {
   font-weight:600;
   letter-spacing:2px;
   font-size: var(--text-med)
 }
+
 
 .subtitle {
   font-weight:500;
@@ -151,4 +156,8 @@ a {
     transform: scaleX(1);
     transform-origin: bottom left;
     transition: transform 0.25s ease-out;
+}
+
+.pink-background {
+  background-color: var(--pink-med);
 }
