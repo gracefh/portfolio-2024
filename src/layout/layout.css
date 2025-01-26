@@ -24,7 +24,7 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
   .two-column-layout {
     width: 100%;
     grid-template-columns: 1fr;
@@ -35,10 +35,10 @@
 .footer {
     display:flex;
     justify-content: space-between;
-
+    align-items: center;
 }
 
-.contact-list {
+.dot-list {
     display:flex;
     align-items:center;
     gap: .5em;

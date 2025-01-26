@@ -21,7 +21,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
   return (
     <motion.div className={`project-card`}>
       <motion.div>
-        <div className="section-header project-title">{title}</div>
+        <div className="section-header">{title}</div>
         <div className="subtitle project-date">{date}</div>
       </motion.div>
 
