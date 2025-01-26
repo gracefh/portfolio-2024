@@ -2,13 +2,13 @@ import {useState, useCallback} from "react";
 import "./positions.css"
 
 enum PossibleRoles {
-    FULL_STACK_ENGINEER = "full-stack engineer",
-    ARTIST = "artist",
-    BOBA_ENJOYER = "boba enjoyer",
+    FULL_STACK_ENGINEER = "full-stack engineering",
+    ARTIST = "drawing cute things",
+    BOBA_ENJOYER = "chronically buying boba",
     MIT = "MIT Class of 2024"
 }
 
-const possibleRolesList = [PossibleRoles.FULL_STACK_ENGINEER, PossibleRoles.ARTIST, PossibleRoles.BOBA_ENJOYER]
+const possibleRolesList = [PossibleRoles.FULL_STACK_ENGINEER, PossibleRoles.ARTIST, PossibleRoles.BOBA_ENJOYER, PossibleRoles.MIT]
 
 function generateRandomString(length: number) {
     const chars = 'abcdefghijklmnopqrstuvwxyz'
@@ -38,8 +38,8 @@ export const Positions = () => {
         const lengthDifference = possibleRolesList[ind].length - displayedLength
 
         let counter = 0
-        const refreshTime = 30
-        const switchTime = 360
+        const refreshTime = 45
+        const switchTime = 540
         const interval = setInterval(() => {
             const lengthToDisplay = Math.floor((counter * (refreshTime * lengthDifference / switchTime) + displayedLength))
             counter += 1

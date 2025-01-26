@@ -57,25 +57,25 @@ export const ProjectCards = () => {
 const containerMotion = {
   hover: {
     backgroundColor: "#f7c3c3",
-  }
-}
+  },
+};
 const arrowMotion = {
   rest: {
     x: 0,
     transition: {
-      duration: .8,
-      ease: "easeInOut"
-    }
+      duration: 0.8,
+      ease: "easeInOut",
+    },
   },
   hover: {
     x: [0, 15, 0],
     transition: {
       repeat: Infinity,
-      duration: .8,
-      delay:.5,
-      ease: "easeInOut"
-    }
-  }
+      duration: 0.8,
+      delay: 0.5,
+      ease: "easeInOut",
+    },
+  },
 };
 
 const AllProjectsBar = () => {
@@ -89,7 +89,8 @@ const AllProjectsBar = () => {
       variants={containerMotion}
     >
       <div>All Projects</div>
-      <motion.div variants={arrowMotion}><i className="fa fa-solid fa-arrow-right-long"></i>
+      <motion.div variants={arrowMotion}>
+        <i className="fa fa-solid fa-arrow-right-long"></i>
       </motion.div>
     </motion.a>
   );
@@ -98,7 +99,12 @@ const AllProjectsBar = () => {
 export const HomeProjectSection = () => {
   return (
     <section className="projects section-flex">
-      <h2 className="text-pink header-lg">PROJECTS</h2>
+      <div>
+        <h2 className="text-pink header-lg header-with-subtitle">PROJECTS</h2>
+        <div className="instrument-sans-500-normal">
+          some of the programming projects I've worked on recently!
+        </div>
+      </div>
       <ProjectCards />
       <AllProjectsBar />
     </section>

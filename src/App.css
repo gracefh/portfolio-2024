@@ -3,7 +3,7 @@ main {
 }
 
 section {
-  padding: 5em 15vw;
+  padding: 5em 20vw;
 
   &:first-of-type {
     padding-top: 10em;
@@ -171,4 +171,35 @@ a {
 
 .pink-background {
   background-color: var(--pink-med);
+}
+
+.text-justified {
+  text-align:justify;
+}
+
+.header-with-subtitle {
+  margin-bottom: var(--spacer-quarter);
+}
+
+.text-left {
+  text-align:left;
+}
+
+.text-right {
+  text-align:right;
+}
+
+.fa-3xs {
+  font-size:.5em;
+}
+.fa-4xs {
+  font-size:.125em;
+}
+
+.d-flex {
+  display:flex;
+}
+
+li {
+  padding:.25em;
 }

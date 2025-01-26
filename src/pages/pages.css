@@ -41,3 +41,27 @@
   align-items:center;
   height:100vh;
 }
+
+.resume-header {
+  display:flex;
+  justify-content:space-between;
+}
+
+.resume-company {
+  margin:0;
+}
+
+.resume-section-header {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap: 2em;
+
+  span {
+    height:3px;
+    background-color:black;
+    flex-grow:2;
+    border-radius:2em;
+  }
+}
+

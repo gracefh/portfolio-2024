@@ -15,6 +15,10 @@ body {
   --text-med: 1.5em;
   --text-sm: 1em;
 
+  --spacer-quarter: .25em;
+  --spacer-half: .5em;
+  --space-full: 1em;
+
   font-family: "Instrument Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;

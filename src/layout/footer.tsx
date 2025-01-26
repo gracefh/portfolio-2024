@@ -1,17 +1,16 @@
-import { ThreeColumnSection } from "./threeColumnSection"
-import { TwoColumnSection } from "./twoColumnSection"
-
 export const Footer = () => {
-    return <ThreeColumnSection additionalClass="pink-background">
-        <div>
+    return <section className="pink-background footer">
+        <div className="instrument-sans-400 text-black text-left">
+            <div>Grace Huang</div>
+            <div>2025</div>
+        </div>
+        <div className="instrument-sans-400 text-black contact-list">
+            <div>Email</div>
+            <i className="fa fa-solid fa-circle fa-4xs"></i>
+            <div>LinkedIn</div>
+            <i className="fa fa-solid fa-circle fa-4xs"></i>
+            <div>GitHub</div>
 
         </div>
-        <div></div>
-        <div>
-            <h3>Reach out!</h3>
-            <ul>GitHub: </ul>
-            <ul>LinkedIn: </ul>
-            <ul>Email: grace.f.huang@gmail.com</ul>
-        </div>
-    </ThreeColumnSection>
+    </section>
 }

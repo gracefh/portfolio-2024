@@ -30,3 +30,16 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+.footer {
+    display:flex;
+    justify-content: space-between;
+
+}
+
+.contact-list {
+    display:flex;
+    align-items:center;
+    gap: .5em;
+}

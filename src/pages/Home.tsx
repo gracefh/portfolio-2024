@@ -27,7 +27,7 @@ const HomeImpl = () => {
           <h2 className="text-white header-md">ABOUT</h2>
         </div>
         <div className="about-content responsive-width-50 align-self-end">
-          <p className="instrument-sans-500-normal text-black">
+          <p className="instrument-sans-500-normal text-black text-justified">
             Hello! I'm Grace, and I'm a <b>full-stack engineer</b> based in <b>San Francisco</b>. 
             I currently work at Uncountable. Before that, I graduated with a BS and MEng in 
             Computer Science and Engineering from MIT in 2024. While there, I did
