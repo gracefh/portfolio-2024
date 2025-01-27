@@ -1,6 +1,4 @@
 import { ReactElement } from "react";
-import { Footer } from "../layout/footer";
-import { NavBar } from "../layout/navBar";
 
 export const ResumeItem = (props: {
   company: string;
@@ -41,7 +39,6 @@ export const ResumeSectionHeader = ({ name }: { name: string }) => {
 export const Resume = () => {
   return (
     <main>
-      <NavBar />
       <section>
         <div>
           <ResumeSectionHeader name="experience" />
@@ -84,34 +81,54 @@ export const Resume = () => {
             dates={"May 2022 - Aug 2022"}
             description={
               <ul>
-               <li>Created tooling to allow programmers to diagnose potential errors in a process, using Hack for back‑end and React for front‑end</li>
-                <li>Proposed and drove an additional independent project after completing all base project milestones ahead of schedule</li>
+                <li>
+                  Created tooling to allow programmers to diagnose potential
+                  errors in a process, using Hack for back‑end and React for
+                  front‑end
+                </li>
+                <li>
+                  Proposed and drove an additional independent project after
+                  completing all base project milestones ahead of schedule
+                </li>
               </ul>
             }
-          /><ResumeItem
-          company={"Hudson River Trading"}
-          title={"Women in Tech and Trading Intern"}
-          location={"New York, NY"}
-          dates={"Jan 2022"}
-          description={
-            <ul>
-             <li>Implemented a book builder and created trading signals, which were used in mock trading</li>
-            </ul>
-          }
-        />
-        <ResumeItem
-          company={"Meta"}
-          title={"Software Engineering Intern, Facebook Stories Delivery"}
-          location={"Menlo Park, CA"}
-          dates={"May 2021 - Aug 2021"}
-          description={
-            <ul>
-             <li>Launched feature that caused 300k additional daily Facebook stories views</li>
-<li>Worked across multiple parts of the code base, using C++, Python, and Hack</li>
-<li>Completed multiple high‑impact projects and independently proposed separate projects to pursue</li>
-            </ul>
-          }
-        />
+          />
+          <ResumeItem
+            company={"Hudson River Trading"}
+            title={"Women in Tech and Trading Intern"}
+            location={"New York, NY"}
+            dates={"Jan 2022"}
+            description={
+              <ul>
+                <li>
+                  Implemented a book builder and created trading signals, which
+                  were used in mock trading
+                </li>
+              </ul>
+            }
+          />
+          <ResumeItem
+            company={"Meta"}
+            title={"Software Engineering Intern, Facebook Stories Delivery"}
+            location={"Menlo Park, CA"}
+            dates={"May 2021 - Aug 2021"}
+            description={
+              <ul>
+                <li>
+                  Launched feature that caused 300k additional daily Facebook
+                  stories views
+                </li>
+                <li>
+                  Worked across multiple parts of the code base, using C++,
+                  Python, and Hack
+                </li>
+                <li>
+                  Completed multiple high‑impact projects and independently
+                  proposed separate projects to pursue
+                </li>
+              </ul>
+            }
+          />
         </div>
         <div>
           <ResumeSectionHeader name="education" />
@@ -165,7 +182,8 @@ export const Resume = () => {
         <div>
           <ResumeSectionHeader name="skills + interests" />
           <p>
-            <b>Programming Languages + Frameworks:</b> Typescript, React, Svelte, Vue.js, D3.js, HTML, CSS, Python, Git, LaTeX
+            <b>Programming Languages + Frameworks:</b> Typescript, React,
+            Svelte, Vue.js, D3.js, HTML, CSS, Python, Git, LaTeX
           </p>
           <p>
             <b>Design:</b> Adobe Illustrator, Figma, Adobe After Effects
@@ -179,7 +197,6 @@ export const Resume = () => {
           </p>
         </div>
       </section>
-      <Footer />
     </main>
   );
 };

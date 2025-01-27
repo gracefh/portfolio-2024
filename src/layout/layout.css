@@ -36,6 +36,8 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
+    padding-top:4em !important;
+    padding-bottom:4em;
 }
 
 .dot-list {

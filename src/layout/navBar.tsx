@@ -26,6 +26,7 @@ export const NavBarItem = ({
           className={({ isActive }) =>
             `instrument-sans-500-spaced nav-link ${isActive ? "active" : ""}`
           }
+          viewTransition
         >
           {title}
         </NavLink>
@@ -46,7 +47,7 @@ export const NavBar = () => {
         onHoverEnd={() => setIsHover(false)}
         transition={{ type: "ease" }}
       >
-        <NavBarItem title={"home"} link="/"></NavBarItem>
+        <NavBarItem title={"home"} link="/" ></NavBarItem>
         <NavBarItem
           title={"projects"}
           link="/projects"

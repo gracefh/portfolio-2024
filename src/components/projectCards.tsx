@@ -21,7 +21,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
   return (
     <motion.div className={`project-card`}>
       <motion.div>
-        <div className="section-header">{title}</div>
+        <div className="project-header">{title}</div>
         <div className="subtitle project-date">{date}</div>
       </motion.div>
 
@@ -99,14 +99,14 @@ const AllProjectsBar = () => {
 export const HomeProjectSection = () => {
   return (
     <section className="projects section-flex">
-      <div>
+      <div className="section-header">
         <h2 className="text-pink header-lg header-with-subtitle">PROJECTS</h2>
         <div className="instrument-sans-500-normal">
-          some of the programming projects I've worked on recently!
+          some of the programming projects I've been working on!
         </div>
       </div>
       <ProjectCards />
       <AllProjectsBar />
     </section>
-  );
+  )
 };

@@ -3,8 +3,6 @@ import { DownArrow } from "../components/downArrow";
 import "./pages.css";
 import { Positions } from "../components/positions";
 import { HomeProjectSection, ProjectCards } from "../components/projectCards";
-import { NavBar } from "../layout/navBar";
-import { Footer } from "../layout/footer";
 
 const HomeImpl = () => {
   const ref = React.useRef<HTMLInputElement | null>(null);
@@ -13,7 +11,6 @@ const HomeImpl = () => {
   };
   return (
     <main>
-      <NavBar />
       <section className="landing-page">
         <div>
           <h1 className="name rubik-mono-one-regular">GRACE</h1>
@@ -42,7 +39,6 @@ const HomeImpl = () => {
         </div>
       </section>
       <HomeProjectSection />
-      <Footer/>
     </main>
   );
 };

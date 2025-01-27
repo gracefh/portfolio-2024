@@ -8,8 +8,8 @@ type TwoColumnSectionProps =  {
 }
 export const TwoColumnSection = (props: PropsWithChildren<TwoColumnSectionProps>) => {
     const {children, additionalClass, sectionTitle} = props
-    return <section className={`two-column-layout ${additionalClass}`}>
-        {sectionTitle != null && <div className="two-column-header section-header">{sectionTitle}</div>}
+    return <div className={`two-column-layout ${additionalClass}`}>
+        {sectionTitle != null && <div className="two-column-header column-header">{sectionTitle}</div>}
         {children}
-    </section>
+    </div>
 }

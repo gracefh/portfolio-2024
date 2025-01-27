@@ -1,34 +1,50 @@
 import React from "react";
 import "./pages.css";
-import { NavBar } from "../layout/navBar";
-import { ThreeColumnSection } from "../layout/threeColumnSection";
 import { TwoColumnSection } from "../layout/twoColumnSection";
-import { Footer } from "../layout/footer";
 
 const AboutImpl = () => {
-  console.log("I'm rendering");
   return (
     <main>
-      <NavBar />
       <section>
-        <h2 className="text-pink header-lg">ABOUT</h2>
-        <div>some fun facts about Grace!</div>
-      </section>
-
-      <TwoColumnSection>
-        <div>
-          <ul>
-            <li>Currently based in San Francisco</li>
-          </ul>
+        <div className="section-header">
+          <h2 className="text-pink header-lg">ABOUT</h2>
+          <div className="subtitle">some fun facts about me!</div>
         </div>
-      </TwoColumnSection>
-      <Footer />
-
-      {/* <ThreeColumnSection sectionTitle="RANDOM TESTING" additionalClass="pink-background">
-          <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nihil illo veniam ut, quisquam nulla numquam aut quod aliquam explicabo totam pariatur quae! Dolorem, doloribus ea in dolor vel sed.</div>
-          <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nihil illo veniam ut, quisquam nulla numquam aut quod aliquam explicabo totam pariatur quae! Dolorem, doloribus ea in dolor vel sed.</div>
-          <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nihil illo veniam ut, quisquam nulla numquam aut quod aliquam explicabo totam pariatur quae! Dolorem, doloribus ea in dolor vel sed. </div>
-        </ThreeColumnSection> */}
+        <TwoColumnSection>
+          <div></div>
+          <div className="text-left">
+            <ul>
+              <li>Currently based in San Francisco, CA</li>
+              <li>
+                Working as a Full-Stack Engineer at{" "}
+                <a href="https://www.uncountable.com/" className="text-link">
+                  Uncountable
+                </a>
+              </li>
+              <li>Graduated with B.S. and M.Eng from MIT, class of 2024</li>
+              <li>
+                Interested in exploring front-end development, data
+                visualizations, and design
+              </li>
+              <li>
+                Drawing digital art, learning Illustrator, and working on crafts{" "}
+                <a
+                  href="https://www.instagram.com/butter.and.boba"
+                  className="text-link"
+                >
+                  @butter.and.boba
+                </a>
+              </li>
+              <li>
+                A cappella enthusiast -- previously part of MIT Syncopasian and
+                currently arranging songs I like, casually beatboxing, and
+                contemplating creating a cappella covers
+              </li>
+              <li>Currently training Capoeira Angola, previously Taekwondo</li>
+            </ul>
+          </div>
+        </TwoColumnSection>
+      </section>
     </main>
   );
 };

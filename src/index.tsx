@@ -8,9 +8,10 @@ import { ErrorPage } from './pages/errorPage';
 import { Home } from './pages/home';
 import { About } from './pages/about';
 import { Resume } from './pages/resume';
+import App from './App';
 
-const router = createBrowserRouter([
-  {
+const router = createBrowserRouter([{path: "/", element: <App/>, errorElement: <ErrorPage/>,
+  children: [{
     path: "/",
     element: <Home />,
     errorElement: <ErrorPage />,
@@ -40,6 +41,7 @@ const router = createBrowserRouter([
       //   path: "fun/:projectName",
       //   element: <FunPages />,
       // },
+    ]}
 ]);
 
 const root = ReactDOM.createRoot(
