@@ -65,3 +65,16 @@
   }
 }
 
+
+.about-image {
+  padding: 1em 0;
+
+  img {
+    border-radius:60vw;
+    /* width:75%; */
+  }
+}
+
+.about-description {
+  align-self:center;
+}

@@ -11,17 +11,19 @@ const AboutImpl = () => {
           <div className="subtitle">some fun facts about me!</div>
         </div>
         <TwoColumnSection>
-          <div></div>
-          <div className="text-left">
+          <div className="about-image">
+            <img src="image/grace-face.jpg" alt="Grace's frace"></img>
+          </div>
+          <div className="text-left about-description">
             <ul>
-              <li>Currently based in San Francisco, CA</li>
+              <li>Currently based in <span className="text-pink">San Francisco, CA</span></li>
               <li>
                 Working as a Full-Stack Engineer at{" "}
                 <a href="https://www.uncountable.com/" className="text-link">
                   Uncountable
                 </a>
               </li>
-              <li>Graduated with B.S. and M.Eng from MIT, class of 2024</li>
+              <li>Graduated with B.S. and M.Eng from <span className="text-pink">MIT</span>, class of 2024</li>
               <li>
                 Interested in exploring front-end development, data
                 visualizations, and design
@@ -36,7 +38,7 @@ const AboutImpl = () => {
                 </a>
               </li>
               <li>
-                A cappella enthusiast -- previously part of MIT Syncopasian and
+                A cappella enthusiast -- previously part of <span className="text-pink">MIT Syncopasian</span> and
                 currently arranging songs I like, casually beatboxing, and
                 contemplating creating a cappella covers
               </li>

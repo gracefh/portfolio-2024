@@ -1,7 +1,4 @@
 import { type ProjectCardProps } from "../components/projectCards";
-import MigrationMotivationsImage from "../assets/project-previews/mmdt-preview.png";
-import DataVisImage from "../assets/project-previews/data-vis-preview.png";
-import FritterImage from "../assets/project-previews/fritter-preview.png";
 
 export const mainProjects: Omit<ProjectCardProps, "ind">[] = [
   {
@@ -17,12 +14,11 @@ export const mainProjects: Omit<ProjectCardProps, "ind">[] = [
     title: "Twofish",
     date: "2023 -- 2024",
     description:
-      "The topic of my Master's thesis for my MEng (2023 - 2024) at MIT, Twofish explores possible ways of improving the process of editing charts. The project extends Bluefish, a visualization library built with UI \
-      frameworks in mind, and combines it with TLDraw, a whiteboard editing tool.",
+      "The topic of my Master's thesis for my MEng (2023 - 2024) at MIT, Twofish explores possible ways of improving the process of editing charts. The project extends Bluefish, a visualization library built with UI frameworks in mind, and combines it with TLDraw, a whiteboard editing tool.",
     route: "/projects/twofish",
   },
   {
-    imageLink: MigrationMotivationsImage,
+    imageLink: "image/project-previews/mmdt-preview.png",
     title: "Central American Migration Interactive Data Visualization",
     date: "2023",
     description:
@@ -30,7 +26,7 @@ export const mainProjects: Omit<ProjectCardProps, "ind">[] = [
     route: "/projects/migration-motivations",
   },
   {
-    imageLink: DataVisImage,
+    imageLink: "image/project-previews/data-vis-preview.png",
     title: "Data Visualization Work",
     date: "2021 –– 2024",
     description:

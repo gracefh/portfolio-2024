@@ -25,16 +25,16 @@ const HomeImpl = () => {
         </div>
         <div className="about-content responsive-width-70 align-self-end">
           <p className="instrument-sans-500-normal text-black text-justified">
-            Hello! I'm Grace, and I'm a <b>full-stack engineer</b> based in <b>San Francisco</b>. 
-            I currently work at Uncountable. Before that, I graduated with a BS and MEng in 
-            Computer Science and Engineering from MIT in 2024. While there, I did
-            research in MIT's Visualization Group, sang a cappella, and practiced
-            taekwondo. I enjoy building software (hence the existence of this
-            page!), learning about UI/UX design, and thinking about human
-            computer interactions, especially with regards to data visualization.
-            Outside of work, you can find me baking a variety of desserts,
-            making music, drawing on Procreate or in margins of notebooks, or
-            exploring San Francisco!
+            Hello! I'm Grace, and I'm a <b>full-stack engineer</b> based in{" "}
+            <b>San Francisco</b>. I currently work at Uncountabl, but before
+            starting there in August, 2024, I graduated with a BS and MEng in
+            Computer Science and Engineering from MIT. While at MIT, I
+            did research in MIT's Visualization Group, sang a cappella, and
+            practiced taekwondo. I enjoy building software, learning about UI/UX
+            design, data visualization, and human-computer interactions. Outside
+            of work, you can find me baking a variety of desserts, making music,
+            drawing on Procreate or in margins of notebooks, or exploring San
+            Francisco!
           </p>
         </div>
       </section>

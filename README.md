@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Hi!
+
+Thanks for checking out my portfolio! I started working on this version of my portfolio in 2024 and am continuing to work on this into 2025. We're working on it oop
+
+## Create React App Info
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

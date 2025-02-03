@@ -58,6 +58,7 @@ export const NavBar = () => {
             ></NavBarItem>
           }
         ></NavBarItem>
+        <NavBarItem title={"art"} link="/art"></NavBarItem>
         <NavBarItem title={"about"} link="/about"></NavBarItem>
         <NavBarItem title={"resume"} link="/resume"></NavBarItem>
       </motion.div>

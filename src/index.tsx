@@ -9,6 +9,8 @@ import { Home } from './pages/home';
 import { About } from './pages/about';
 import { Resume } from './pages/resume';
 import App from './App';
+import { Playground } from './pages/playground';
+import { Art } from './pages/art';
 
 const router = createBrowserRouter([{path: "/", element: <App/>, errorElement: <ErrorPage/>,
   children: [{
@@ -24,6 +26,14 @@ const router = createBrowserRouter([{path: "/", element: <App/>, errorElement: <
   {
     path: "resume",
     element: <Resume />,
+  },
+  {
+    path: "art",
+    element: <Art />,
+  },
+  {
+    path: "playground",
+    element: <Playground />,
   }
   // {
       //   path: "projects/",
