@@ -44,13 +44,29 @@ export const Resume = () => {
           <ResumeSectionHeader name="experience" />
           <ResumeItem
             company={"Uncountable"}
-            title={"Full-Stack Engineer"}
+            title={"Engineering Manager"}
             location={"San Francisco, CA"}
-            dates={"Aug 2024 - Present"}
+            dates={"April 2025 - Present"}
             description={
               <ul>
                 <li>
-                  Working on various projects on core pages of our platform
+                  Managing 8 different engineers
+                </li>
+                <li>
+                  Leading 
+                </li>
+              </ul>
+            }
+          />
+          <ResumeItem
+            company={"Uncountable"}
+            title={"Full-Stack Engineer"}
+            location={"San Francisco, CA"}
+            dates={"Aug 2024 - April 2025"}
+            description={
+              <ul>
+                <li>
+                  Worked on features and projects on the core pages of our platform
                 </li>
               </ul>
             }

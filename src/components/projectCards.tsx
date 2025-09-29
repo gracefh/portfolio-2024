@@ -2,9 +2,9 @@ import { mainProjects } from "../data/mainProjectData";
 import "./projectCards.css";
 import { motion } from "framer-motion";
 import {
-  standardEaseTransition,
   standardSpringTransition,
 } from "../utils/motion_utils";
+import { Link } from "react-router-dom";
 
 export type ProjectCardProps = {
   ind: number;
@@ -19,7 +19,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
   const { ind, title, date, imageLink, description, route } = props;
 
   return (
-    <motion.div className={`project-card`}>
+    <Link to={route} className={`project-card`}>
       <motion.div>
         <div className="project-header">{title}</div>
         <div className="subtitle project-date">{date}</div>
@@ -40,7 +40,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
         <></>
       )}
       <p className="instrument-sans-400 text-black">{description}</p>
-    </motion.div>
+    </Link>
   );
 };
 

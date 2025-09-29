@@ -16,6 +16,14 @@ section {
   }
 }
 
+article {
+  padding: 0 20vw 5em;
+  
+  div {
+    padding: 1em 0 0;
+  }
+}
+
 p {
   line-height:150%;
   text-align:left;

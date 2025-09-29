@@ -6,13 +6,13 @@ export const mainProjects: Omit<ProjectCardProps, "ind">[] = [
     title: "Ball Defenders",
     date: "2024",
     description:
-      "A small passion project, born out of both the frustration and the fun I had playing the United game of similar name (Ball Defender) on a recent, long flight",
+      "A small passion project, born out of both the frustration and the fun I had playing the United Airlines game of similar name (Ball Defender) on a long, international flight",
     route: "/projects/ball-defenders",
   },
   {
     imageLink: "",
     title: "Twofish",
-    date: "2023 -- 2024",
+    date: "2023 –– 2024",
     description:
       "The topic of my Master's thesis for my MEng (2023 - 2024) at MIT, Twofish explores possible ways of improving the process of editing charts. The project extends Bluefish, a visualization library built with UI frameworks in mind, and combines it with TLDraw, a whiteboard editing tool.",
     route: "/projects/twofish",

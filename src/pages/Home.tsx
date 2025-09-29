@@ -21,12 +21,12 @@ const HomeImpl = () => {
       </section>
       <section className="about" ref={ref}>
         <div className="about-header">
-          <h2 className="text-white header-md">ABOUT</h2>
+          <h2 className="text-white header-md">ABOUT ME</h2>
         </div>
         <div className="about-content responsive-width-70 align-self-end">
           <p className="instrument-sans-500-normal text-black text-justified">
             Hello! I'm Grace, and I'm a <b>full-stack engineer</b> based in{" "}
-            <b>San Francisco</b>. I currently work at Uncountabl, but before
+            <b>San Francisco</b>. I currently work at Uncountable, but before
             starting there in August, 2024, I graduated with a BS and MEng in
             Computer Science and Engineering from MIT. While at MIT, I
             did research in MIT's Visualization Group, sang a cappella, and

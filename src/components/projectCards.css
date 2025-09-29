@@ -14,6 +14,13 @@
   & .project-preview {
     max-width: min(24em, 90%);
   }
+
+  &:hover {
+    cursor:pointer;
+    background-color: rgba(0,0,0,0.2);
+    background-blend-mode: screen;
+    transition: var(--transition-hover);
+  }
 }
 
 .all-projects-link {

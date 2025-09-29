@@ -11,6 +11,8 @@ import { Resume } from './pages/resume';
 import App from './App';
 import { Playground } from './pages/playground';
 import { Art } from './pages/art';
+import { Projects } from './pages/projects';
+import { ProjectPages } from './pages/projects/projectPages';
 
 const router = createBrowserRouter([{path: "/", element: <App/>, errorElement: <ErrorPage/>,
   children: [{
@@ -34,15 +36,15 @@ const router = createBrowserRouter([{path: "/", element: <App/>, errorElement: <
   {
     path: "playground",
     element: <Playground />,
-  }
-  // {
-      //   path: "projects/",
-      //   element: <ProjectsPage />,
-      // },
-      // {
-      //   path: "projects/:projectName",
-      //   element: <ProjectPages />,
-      // },
+  },
+  {
+        path: "projects/",
+        element: <Projects />,
+      },
+      {
+        path: "projects/:projectName",
+        element: <ProjectPages />,
+      },
       // {
       //   path: "fun/",
       //   element: <FunPage />,
