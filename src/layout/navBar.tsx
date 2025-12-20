@@ -18,7 +18,7 @@ export const NavBarItem = ({
       <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        transition={{ type: "ease" }}
+        transition={{ type: "tween" }}
         layout
       >
         <NavLink
@@ -45,7 +45,7 @@ export const NavBar = () => {
         data-isHover={isHover}
         onHoverStart={() => setIsHover(true)}
         onHoverEnd={() => setIsHover(false)}
-        transition={{ type: "ease" }}
+        transition={{ type: "tween" }}
       >
         <NavBarItem title={"home"} link="/" ></NavBarItem>
         <NavBarItem

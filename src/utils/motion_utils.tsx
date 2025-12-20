@@ -1,8 +1,9 @@
+import { Transition } from "framer-motion"
 
 
-export const standardEaseTransition = { duration: 0.3, ease: "easeIn" }
+export const standardEaseTransition: Transition = { duration: 0.3, ease: "easeIn" }
 
 
-export const standardSpringTransition = {type: "spring", 
+export const standardSpringTransition: Transition = {type: "spring", 
     damping: 20,
     stiffness: 200}

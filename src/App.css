@@ -237,3 +237,11 @@ li {
   margin-top:0;
   margin-block-end: 0;
 }
+
+#canvas-container {
+  /* margin: 10vh 10vw; */
+  height: 100vh;
+  width: 100vw;
+  /* width:100vw; */
+  text-align:center;
+}

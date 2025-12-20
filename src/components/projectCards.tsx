@@ -1,6 +1,6 @@
 import { mainProjects } from "../data/mainProjectData";
 import "./projectCards.css";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import {
   standardSpringTransition,
 } from "../utils/motion_utils";
@@ -59,7 +59,7 @@ const containerMotion = {
     backgroundColor: "#f7c3c3",
   },
 };
-const arrowMotion = {
+const arrowMotion: Variants = {
   rest: {
     x: 0,
     transition: {

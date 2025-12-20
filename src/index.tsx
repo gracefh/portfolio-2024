@@ -33,10 +33,7 @@ const router = createBrowserRouter([{path: "/", element: <App/>, errorElement: <
     path: "art",
     element: <Art />,
   },
-  {
-    path: "playground",
-    element: <Playground />,
-  },
+
   {
         path: "projects/",
         element: <Projects />,
@@ -53,7 +50,10 @@ const router = createBrowserRouter([{path: "/", element: <App/>, errorElement: <
       //   path: "fun/:projectName",
       //   element: <FunPages />,
       // },
-    ]}
+    ]},  {
+    path: "playground",
+    element: <Playground />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(
