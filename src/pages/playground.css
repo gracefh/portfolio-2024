@@ -1,17 +1,35 @@
 .blobs {
-    -webkit-filter: url("#goo");
-    filter: url("#goo");
-   }
-   
-   .blob {
-       fill: white;
-   }
-   
-   #loader {
-	display: inline-block;
-	position: relative;
-	width: 800px;
-	height: 800px;
-	top: 50%;
-	left: 50%;
+  -webkit-filter: url("#goo");
+  filter: url("#goo");
+}
+
+.blob {
+  fill: white;
+}
+
+#loader {
+  display: inline-block;
+  position: relative;
+  width: 800px;
+  height: 800px;
+  top: 50%;
+  left: 50%;
+}
+
+.home-page-menu--wrapper {
+  position: fixed;
+  bottom: 3vh;
+  text-align:center;
+  width:100%;
+
+  .home-page-menu--item {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+  }
+
+  .home-page-menu--icon {
+    width: 5em;
+    height: 5em;
+  }
 }
