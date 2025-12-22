@@ -3,7 +3,7 @@ import "./projectCards.css";
 import { motion, Variants } from "framer-motion";
 import {
   standardSpringTransition,
-} from "../utils/motion_utils";
+} from "../utils/motionUtils";
 import { Link } from "react-router-dom";
 
 export type ProjectCardProps = {

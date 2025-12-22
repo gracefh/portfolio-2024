@@ -19,13 +19,20 @@
 .home-page-menu--wrapper {
   position: fixed;
   bottom: 3vh;
-  text-align:center;
-  width:100%;
+  text-align: center;
+  width: 100%;
+
+  .home-page-menu {
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+  }
 
   .home-page-menu--item {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
+    gap: 0.5em;
   }
 
   .home-page-menu--icon {

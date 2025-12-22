@@ -2,52 +2,19 @@ import { Canvas } from "@react-three/fiber";
 import React, { useRef } from "react";
 import { Group, InstancedMesh, Vector3 } from "three";
 import { Instance, Instances, useGLTF } from "@react-three/drei";
-import {
-  Color,
-  Mesh,
-  MeshPhysicalMaterialProperties,
-  Object3D,
-  Object3DEventMap,
-} from "three";
+import { Color, Mesh, Object3D } from "three";
 import { useFrame } from "@react-three/fiber";
 import { easing } from "maath";
 import { useMousePosition } from "../utils/hooks";
-import { Position, SPARKLE_POSITIONS } from "../utils/modelData";
+import { SPARKLE_POSITIONS } from "../utils/modelData";
 import "./playground.css";
-import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
-
-const meshProperties: Partial<MeshPhysicalMaterialProperties> = {
-  transparent: true,
-  opacity: 0.8,
-  color: new Color(230, 112, 137),
-  roughness: 0.25,
-  metalness: 0.9,
-  reflectivity: 0.85,
-  visible: true,
-  // iridescence: 0.7,
-  fog: true,
-  depthTest: true,
-  depthWrite: true,
-};
-
-const STANDARD_SCALE: [number, number, number] = [0.25, 0.25, 0.25];
-
-const colors: Partial<Record<string, Color>> = {
-  pink: new Color(230, 112, 137),
-  orange: new Color(219, 124, 2),
-  yellow: new Color(239, 231, 60),
-  blue: new Color(103, 166, 214),
-};
-
-type RGB = { r: number; g: number; b: number };
-
-const nodeIsMesh = (node?: Object3D<Object3DEventMap>): node is Mesh =>
-  node?.type === "Mesh";
-
-const Material = (props: Partial<MeshPhysicalMaterialProperties>) => {
-  return <meshPhysicalMaterial {...meshProperties} {...props} />;
-};
+import {
+  STANDARD_SCALE,
+  StandardMaterial,
+  colors,
+  nodeIsMesh,
+} from "../utils/modelUtils";
+import { PageLinks } from "../components/homePageNav";
 
 export function NameModel() {
   const { nodes } = useGLTF("name-mesh/name-mesh.gltf");
@@ -72,7 +39,7 @@ export function NameModel() {
         scale={STANDARD_SCALE}
         ref={meshRef}
       >
-        <Material />
+        <StandardMaterial />
       </mesh>
     </group>
   );
@@ -83,8 +50,6 @@ export function Sparkle() {
   const sparkle = React.useMemo(() => {
     return nodes["sparkle"];
   }, [nodes]);
-
-  const mousePosition = useMousePosition();
 
   const dummy = new Object3D();
   useFrame((state, delta) => {
@@ -114,13 +79,12 @@ export function Sparkle() {
 
   return (
     <Instances
-      limit={100} // Optional: max amount of items (for calculating buffer size)
+      limit={100}
       geometry={sparkle.geometry}
       ref={instanceRef}
       scale={STANDARD_SCALE}
     >
-      <Material color={colors.blue} />
-
+      <StandardMaterial color={colors.blue} />
       {SPARKLE_POSITIONS.map((position, i) => {
         return <Instance position={position} scale={STANDARD_SCALE} key={i} />;
       })}
@@ -138,8 +102,6 @@ export function AnimalModel(props: {
 }) {
   const { nodes } = useGLTF(props.fileName);
   const groupRef = useRef<Group>(undefined);
-  const faceRef = useRef<Mesh>(undefined);
-  const eyeRef = useRef<Mesh>(undefined);
 
   const face = React.useMemo(() => {
     return nodes[props.faceNode];
@@ -168,10 +130,9 @@ export function AnimalModel(props: {
           castShadow
           receiveShadow
           geometry={face.geometry}
-          ref={faceRef}
           scale={props.scale ?? STANDARD_SCALE}
         >
-          <Material />
+          <StandardMaterial />
         </mesh>
       )}
       {nodeIsMesh(eyes) && (
@@ -179,63 +140,9 @@ export function AnimalModel(props: {
           castShadow
           receiveShadow
           geometry={eyes.geometry}
-          ref={eyeRef}
           scale={props.scale ?? STANDARD_SCALE}
         >
-          <Material color={new Color(10, 10, 10)} />
-        </mesh>
-      )}
-    </group>
-  );
-}
-
-export function AnimalIcon(props: {
-  fileName: string;
-  faceNode: string;
-  eyeNode: string;
-  scale?: [number, number, number];
-  rotation?: [number, number, number];
-  position: [x: number, y: number, z: number];
-}) {
-  const { nodes } = useGLTF(props.fileName);
-  const groupRef = useRef<Group>(undefined);
-  const faceRef = useRef<Mesh>(undefined);
-  const eyeRef = useRef<Mesh>(undefined);
-
-  const face = React.useMemo(() => {
-    return nodes[props.faceNode];
-  }, [nodes, props.faceNode]);
-  const eyes = React.useMemo(() => {
-    return nodes[props.eyeNode];
-  }, [nodes, props.eyeNode]);
-
-  useFrame((state, delta) => {
-    if (groupRef.current === undefined) {
-      return;
-    }
-  });
-  return (
-    <group position={props.position} rotation={props.rotation} ref={groupRef}>
-      {nodeIsMesh(face) && (
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={face.geometry}
-          ref={faceRef}
-          scale={props.scale ?? STANDARD_SCALE}
-        >
-          <Material />
-        </mesh>
-      )}
-      {nodeIsMesh(eyes) && (
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={eyes.geometry}
-          ref={eyeRef}
-          scale={props.scale ?? STANDARD_SCALE}
-        >
-          <Material color={new Color(10, 10, 10)} />
+          <StandardMaterial color={new Color(10, 10, 10)} />
         </mesh>
       )}
     </group>
@@ -243,6 +150,7 @@ export function AnimalIcon(props: {
 }
 
 useGLTF.preload("bear-mesh/bear-mesh.gltf");
+useGLTF.preload("cat-mesh/cat-mesh.gltf");
 useGLTF.preload("bunny-mesh-3/bunny-mesh-3.gltf");
 useGLTF.preload("name-mesh/name-mesh.gltf");
 
@@ -273,7 +181,6 @@ export const Playground = () => {
           eyeNode="bear-eyes"
           position={[150, 133, -350]}
           rotation={[Math.PI / 8, -Math.PI / 3, -Math.PI / 6]}
-          // scale={[0.3, 0.3, 0.3]}
         />
         <AnimalModel
           fileName="bunny-mesh-3/bunny-mesh-3.gltf"
@@ -289,52 +196,10 @@ export const Playground = () => {
           eyeNode="cat-eyes"
           position={[-20, -80, -200]}
           rotation={[0, 0, 0]}
-          // scale={[0.4, 0.4, 0.4]}
         />
         <Sparkle />
       </Canvas>
-      {/* WIP on nav bar */}
-      {/* <div className="home-page-menu--wrapper">
-        <div className="home-page-menu">
-          <div className="home-page-menu--item">
-            {" "}
-            <div className="home-page-menu--icon">
-              <Canvas>
-                <ambientLight intensity={0.1} />
-                <directionalLight
-                  color="#98463b"
-                  position={lightPosition}
-                  intensity={0.01}
-                />
-                <AnimalIcon
-                  fileName="cat-mesh/cat-mesh.gltf"
-                  faceNode="cat-body"
-                  eyeNode="cat-eyes"
-                  position={[0, 0, -50]}
-                  rotation={[0, 0, 0]}
-                />
-              </Canvas>
-            </div>
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "tween" }}
-              layout
-            >
-              <NavLink
-                to="/projects"
-                className={({ isPending }) =>
-                  `instrument-sans-500-spaced nav-link ${
-                    isPending ? "active" : ""
-                  }`
-                }
-              >
-                Projects
-              </NavLink>
-            </motion.div>
-          </div>
-        </div>
-      </div> */}
+      <PageLinks />
     </div>
   );
 };
