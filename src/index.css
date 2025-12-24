@@ -11,7 +11,8 @@ body {
 
   --transition-hover: all .25s ease;
 
-  --text-lg: 3em;
+  --text-xlg: 3em;
+  --text-lg: 2em;
   --text-med: 1.5em;
   --text-sm: 1em;
 

@@ -1,12 +1,18 @@
 import { Canvas } from "@react-three/fiber";
 import React, { useRef } from "react";
-import { Group, InstancedMesh, Vector3 } from "three";
-import { Instance, Instances, useGLTF } from "@react-three/drei";
+import { Camera, Group, InstancedMesh, Vector3 } from "three";
+import {
+  Instance,
+  Instances,
+  useGLTF,
+  PerspectiveCamera,
+  ScreenSpace,
+} from "@react-three/drei";
 import { Color, Mesh, Object3D } from "three";
 import { useFrame } from "@react-three/fiber";
 import { easing } from "maath";
 import { useMousePosition } from "../utils/hooks";
-import { SPARKLE_POSITIONS } from "../utils/modelData";
+import { Position, SPARKLE_POSITIONS } from "../utils/modelData";
 import "./playground.css";
 import {
   STANDARD_SCALE,
@@ -167,6 +173,7 @@ export const Playground = () => {
 
   return (
     <div id="canvas-container">
+      {/* <div className="text-pink instrument-sans-500 home-page--notice">best viewed on desktop</div> */}
       <Canvas>
         <ambientLight intensity={0.1} />
         <directionalLight

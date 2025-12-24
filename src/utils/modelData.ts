@@ -17,12 +17,12 @@ export const SPARKLE_POSITIONS: Position[] = [
     ],
     [
         230,
-        -234,
+        -160,
         -378
     ],
     [
         248,
-        146,
+        176,
         -329
     ],
     [
@@ -72,7 +72,7 @@ export const SPARKLE_POSITIONS: Position[] = [
     ],
     [
         -405,
-        -233,
+        -120,
         -379
     ],
     [

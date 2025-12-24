@@ -128,7 +128,7 @@ const HomePageNavItem = (props: {
       <motion.div variants={textMotion} transition={{ type: "tween" }} layout>
         <NavLink
           to={props.link}
-          className={`instrument-sans-500-spaced text-pink header-md`}
+          className={`instrument-sans-500-spaced text-pink home-page-menu--title`}
         >
           {props.title}
         </NavLink>

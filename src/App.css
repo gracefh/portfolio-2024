@@ -50,6 +50,14 @@ a {
   letter-spacing:.2em;
 }
 
+.nunito-500 {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: var(--text-lg);
+}
+
 .header-md {
   font-weight: 500;
   letter-spacing:1em;
@@ -60,8 +68,12 @@ a {
 .header-lg {
   font-weight: 700;
   letter-spacing:.2em;
-  font-size:var(--text-lg);
+  font-size:var(--text-xlg);
   margin-bottom:var(--spacer-quarter);
+}
+
+.text-lg {
+  font-size: var(--text-lg);
 }
 
 .project-header {
@@ -102,6 +114,9 @@ a {
   color: var(--primary-white);
 }
 
+.text-pink-med {
+  color: var(--pink-med);
+}
 .text-pink {
   color: var(--pink-darker);
 }
@@ -236,6 +251,7 @@ li {
   list-style:none;
   margin-top:0;
   margin-block-end: 0;
+  padding: 0;
 }
 
 #canvas-container {

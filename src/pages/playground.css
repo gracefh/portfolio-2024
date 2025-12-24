@@ -23,9 +23,9 @@
   width: 100%;
 
   .home-page-menu {
-    display: flex;
-    justify-content: center;
-    gap: 5em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 5em;
   }
 
   .home-page-menu--item {
@@ -39,4 +39,26 @@
     width: 5em;
     height: 5em;
   }
+
+  .home-page-menu--title {
+    font-size: var(--text-lg);
+  }
+
+  @media (max-width: 1200px) {
+    .home-page-menu--title {
+      font-size: var(--text-med);
+    }
+
+    .home-page-menu {
+        padding: 0 2em;
+    }
+  }
+
 }
+
+  .home-page--notice {
+    position:fixed;
+    width:100%;
+    text-align:center;
+    top: 1vh;
+  }
