@@ -3,6 +3,7 @@ import { InteractiveDataVis } from "./interactiveDataVis";
 import { DataVis } from "./dataVis";
 import { Twofish } from "./twofish";
 import { ErrorPage } from "../errorPage";
+import { BallDefenders } from "./ballDefenders";
 
 export const ProjectPages = () => {
 let urlParams = useParams();
@@ -19,6 +20,9 @@ let urlParams = useParams();
     case "fritter":
       page = <Twofish />;
       break;
+    case "ball-defenders":
+      page = <BallDefenders />;
+      break
     default:
       page = <ErrorPage />;
   }

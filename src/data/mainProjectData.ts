@@ -2,7 +2,7 @@ import { type ProjectCardProps } from "../components/projectCards";
 
 export const mainProjects: Omit<ProjectCardProps, "ind">[] = [
   {
-    imageLink: "",
+    imageLink: "image/project-previews/ball-defenders.png",
     title: "Ball Defenders",
     date: "2024",
     description:
