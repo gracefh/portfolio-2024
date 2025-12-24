@@ -24,6 +24,7 @@
     "react": "19.2.3",
     "react-bootstrap": "^2.10.6",
     "react-dom": "19.2.3",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.27.0",
     "react-scripts": "5.0.1",
     "three": "^0.182.0",

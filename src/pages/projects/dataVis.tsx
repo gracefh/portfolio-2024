@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { PageHeader } from "../../layout/pageHeader";
+import { ImageCarousel } from "../../components/imageCarousel";
 
 export const DataVis = () => {
   return (
@@ -8,38 +9,51 @@ export const DataVis = () => {
       <article>
         <div>
           <p>
-            My journey in HCI and data visualization spanned the majority of my
-            time in college. Here, I hope to describe how I have become involved
-            in data visualization across my years in college and what I learned
-            in the process.
+            One of the areas I ended up spending a lot of time on during college
+            was Data Visualization. Before entering college, I knew I wanted to
+            do Computer Science but didn't really have a concept of what I
+            wanted to actually explore within the broad field. The first lab I
+            joined happened to be an HCI lab, which I did not even really
+            process until a year or two into college. Joining that lab gave me
+            some experience with D3 and more importantly introduced me to MIT's
+            Visualization group, where I learned that research into data
+            visualizations and data visualization tools existed. In the process
+            of working in the lab, as well as taking and TA-ing the Interactive
+            Data Visualization and Society course, I gained a lot of
+            appreciation for the data visualizations that I encountered in my
+            daily life. In the rest of this page, I'll detail some highlights
+            from each of my data visualization experiences.
           </p>
         </div>
         <div>
           <h3 className="text-left">Haystack Group</h3>
           <p>
-            In freshman and sophomore year, I worked on the Machine Learning
-            Driven Clinical Documentation project in MIT CSAIL's Haystack Group
-            as an undergraduate researcher. There, I was able to practice design
-            thinking in the medical space, was exposed to D3.js, and got to
-            create some visualizations. The images below include some of the
-            work I got to do on this project.
+            In the fall of freshman year, I joined MIT CSAIL's Haystack Group,
+            working on the Machine Learning Driven Clinical Documentation
+            project. One of the most memorable parts of the project was creating
+            prototypes for visualizing medical lab data across time. I went
+            through several rounds of feedback and was able to brainstorm a
+            variety of different potential designs. I also got introduced to
+            D3.js in this process. At the time, I hadn't really understood what
+            D3.js was, but I was able to create some lab visualizations based on
+            examples using Observable.
           </p>
-          {/* <ImageCarousel>
+          <ImageCarousel>
           <div key={1}>
             <img
-              className={CarouselStyle.carouselImage}
-              src={MLDocCharting1}
-              alt=""
+              className={"carousel-image"}
+              src={"/image/project-images/data-vis/ml-doc-charting-1.png"}
+              alt="prototypes for lab data visualization"
             />
           </div>
           <div key={2}>
             <img
-              className={CarouselStyle.carouselImage}
-              src={MLDocCharting2}
-              alt=""
+              className={"carousel-image"}
+              src={"/image/project-images/data-vis/ml-doc-charting-2.png"}
+              alt="line chart on D3"
             />
           </div>
-        </ImageCarousel> */}
+        </ImageCarousel>
         </div>
         <div>
           <h3 className="text-left">Visualization Group</h3>
@@ -60,7 +74,9 @@ export const DataVis = () => {
           </p>
         </div>
         <div>
-          <h3 className="text-left">Interactive Data Visualization & Society</h3>
+          <h3 className="text-left">
+            Interactive Data Visualization & Society
+          </h3>
           <p>
             Having worked in the Visualization Group for a semester, I decided
             to take MIT's data visualization course, in order to become more
@@ -69,7 +85,7 @@ export const DataVis = () => {
             visualizations. Here, I'll detail a bit about what I learned overall
             from the class and things I was able to create, though there also is
             a separate page just for{" "}
-            <Link to="migration-motivations" className={"text-link"}>
+            <Link to="/projects/migration-motivations" className={"text-link"}>
               my final project
             </Link>
             .

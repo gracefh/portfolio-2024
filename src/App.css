@@ -1,15 +1,15 @@
 .App {
-  display:flex;
-  flex-direction:column;
-  min-height:100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 main {
-  text-align:center;
-  flex-grow:1;
+  text-align: center;
+  flex-grow: 1;
 }
 
 section {
-  padding: 5em 20vw;
+  padding: 5em 20vw 0;
 
   &:first-of-type {
     padding-top: 10em;
@@ -17,26 +17,30 @@ section {
 }
 
 article {
-  padding: 0 20vw 5em;
-  
+  padding: 2em 20vw 2em;
+
   div {
     padding: 1em 0 0;
+  }
+
+  &:last-of-type {
+    padding-bottom: 5em;
   }
 }
 
 p {
-  line-height:150%;
-  text-align:left;
+  line-height: 150%;
+  text-align: left;
 }
 
 button {
   border: none;
-  font:inherit;
-  background-color:inherit;
+  font: inherit;
+  background-color: inherit;
 }
 
 a {
-  color:inherit;
+  color: inherit;
 }
 
 .rubik-mono-one-regular {
@@ -47,7 +51,7 @@ a {
 
 .instrument-sans-landing {
   font-weight: 500;
-  letter-spacing:.2em;
+  letter-spacing: 0.2em;
 }
 
 .nunito-500 {
@@ -60,30 +64,23 @@ a {
 
 .header-md {
   font-weight: 500;
-  letter-spacing:1em;
-  font-size:var(--text-med);
+  letter-spacing: 1em;
+  font-size: var(--text-med);
 }
-
 
 .header-lg {
   font-weight: 700;
-  letter-spacing:.2em;
-  font-size:var(--text-xlg);
-  margin-bottom:var(--spacer-quarter);
+  letter-spacing: 0.2em;
+  font-size: var(--text-xlg);
+  margin-bottom: var(--spacer-quarter);
 }
 
 .text-lg {
   font-size: var(--text-lg);
 }
 
-.project-header {
-  font-weight:600;
-  font-size: var(--text-med)
-}
-
-
 .subtitle {
-  font-weight:500;
+  font-weight: 500;
   font-size: var(--text-sm);
 }
 
@@ -93,9 +90,8 @@ a {
 
 .instrument-sans-500-spaced {
   font-weight: 500;
-  letter-spacing:2px;
+  letter-spacing: 2px;
 }
-
 
 .instrument-sans-500-normal {
   font-weight: 500;
@@ -103,7 +99,7 @@ a {
 
 .instrument-sans-600 {
   font-weight: 600;
-  letter-spacing:2px;
+  letter-spacing: 2px;
 }
 
 .instrument-sans-700 {
@@ -126,7 +122,7 @@ a {
 }
 
 .width-50 {
-  width:50%;
+  width: 50%;
 }
 
 .responsive-width-50 {
@@ -139,24 +135,24 @@ a {
 
 @media screen and (max-width: 1000px) {
   .responsive-width-50 {
-    width:100%;
+    width: 100%;
   }
   .responsive-width-70 {
-    width:100%;
+    width: 100%;
   }
 }
 
 .width-100 {
-  width:100%;
+  width: 100%;
 }
 
 .section-header {
-  margin-bottom:var(--spacer-half);
+  margin-bottom: var(--spacer-half);
 }
 
 .section-flex {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   gap: 2em;
 }
 
@@ -170,7 +166,7 @@ a {
 
 a {
   transition: var(--transition-hover);
-  text-decoration:none;
+  text-decoration: none;
 
   &:hover {
     transition: var(--transition-hover);
@@ -179,10 +175,10 @@ a {
 
 .text-link {
   color: var(--pink-darker);
-  padding: 2px 0;
-  display:inline-block;
-  position:relative;
-  
+  padding: 0 0;
+  display: inline-block;
+  position: relative;
+
   &:hover {
     color: var(--primary-black);
   }
@@ -193,23 +189,24 @@ a {
 }
 
 .text-link:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 3px;
+  height: 2px;
   bottom: 0;
   left: 0;
   background-color: var(--primary-black);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
-  border-radius:1em;
+  border-radius: 1em;
 }
 
 .text-link:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-    transition: transform 0.25s ease-out;
+  transform: scaleX(1);
+  height: 2px;
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
 }
 
 .pink-background {
@@ -217,7 +214,7 @@ a {
 }
 
 .text-justified {
-  text-align:justify;
+  text-align: justify;
 }
 
 .header-with-subtitle {
@@ -225,31 +222,31 @@ a {
 }
 
 .text-left {
-  text-align:left;
+  text-align: left;
 }
 
 .text-right {
-  text-align:right;
+  text-align: right;
 }
 
 .fa-3xs {
-  font-size:.5em;
+  font-size: 0.5em;
 }
 .fa-4xs {
-  font-size:.125em;
+  font-size: 0.125em;
 }
 
 .d-flex {
-  display:flex;
+  display: flex;
 }
 
 li {
-  padding:.25em;
+  padding: 0.25em;
 }
 
 .non-decorated-list {
-  list-style:none;
-  margin-top:0;
+  list-style: none;
+  margin-top: 0;
   margin-block-end: 0;
   padding: 0;
 }
@@ -259,5 +256,5 @@ li {
   height: 100vh;
   width: 100vw;
   /* width:100vw; */
-  text-align:center;
+  text-align: center;
 }

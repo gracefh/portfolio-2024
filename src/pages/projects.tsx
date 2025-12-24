@@ -6,7 +6,7 @@ export const Projects = () => {
     <main>
       <PageHeader
         title="PROJECTS"
-        subtitle="class and personal projects I've worked on in the past few years"
+        subtitle="projects I've worked on over the years!"
       />
       <article>
         <ProjectCards />

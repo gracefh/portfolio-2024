@@ -7,7 +7,6 @@ import {
 import { Link } from "react-router-dom";
 
 export type ProjectCardProps = {
-  ind: number;
   title: string;
   date: string;
   imageLink: string;
@@ -16,11 +15,11 @@ export type ProjectCardProps = {
 };
 
 export const ProjectCard = (props: ProjectCardProps) => {
-  const { ind, title, date, imageLink, description, route } = props;
+  const { title, date, imageLink, description, route } = props;
 
   return (
-    <Link to={route} className={`project-card`}>
-      <motion.div>
+    <Link to={route} className="project-card">
+      <motion.div className="project-header--wrapper">
         <div className="project-header">{title}</div>
         <div className="subtitle project-date">{date}</div>
       </motion.div>
@@ -48,7 +47,7 @@ export const ProjectCards = () => {
   return (
     <motion.div className="two-column-layout" layoutRoot>
       {mainProjects.map((mainProject, ind) => (
-        <ProjectCard ind={ind} {...mainProject} key={ind} />
+        <ProjectCard {...mainProject} key={ind} />
       ))}
     </motion.div>
   );
