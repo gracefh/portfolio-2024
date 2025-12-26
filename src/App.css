@@ -70,7 +70,7 @@ a {
 
 .header-lg {
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   font-size: var(--text-xlg);
   margin-bottom: var(--spacer-quarter);
 }
@@ -148,6 +148,12 @@ a {
 
 .section-header {
   margin-bottom: var(--spacer-half);
+  text-align:center;
+
+  .header-image {
+    padding-top: 2em;
+    width: 60vw;
+  }
 }
 
 .section-flex {
@@ -257,4 +263,18 @@ li {
   width: 100vw;
   /* width:100vw; */
   text-align: center;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+iframe {
+  display: block;
+  margin: auto;
+  width: 50vw;
+  height: calc(50vw * 481 / 855);
+  border: none;
 }

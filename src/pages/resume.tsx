@@ -41,7 +41,7 @@ export const ResumeSectionHeader = ({ name }: { name: string }) => {
 export const Resume = () => {
   return (
     <main>
-      <PageHeader title="Resume" />
+      <PageHeader title="RESUME" />
       <article className="resume--wrapper">
         <div>
           <ResumeSectionHeader name="experience" />

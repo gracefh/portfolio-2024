@@ -5,7 +5,7 @@ import { ImageCarousel } from "../../components/imageCarousel";
 export const DataVis = () => {
   return (
     <main>
-      <PageHeader title="Data Visualization Work" />
+      <PageHeader title="Data Visualization Work" image={"/image/project-previews/data-vis-preview.png"} />
       <article>
         <div>
           <p>
@@ -26,7 +26,7 @@ export const DataVis = () => {
           </p>
         </div>
         <div>
-          <h3 className="text-left">Haystack Group</h3>
+          <h3>Haystack Group</h3>
           <p>
             In the fall of freshman year, I joined MIT CSAIL's Haystack Group,
             working on the Machine Learning Driven Clinical Documentation
@@ -56,7 +56,7 @@ export const DataVis = () => {
           </ImageCarousel>
         </div>
         <div>
-          <h3 className="text-left">Visualization Group</h3>
+          <h3>Visualization Group</h3>
           <p>
             In junior year, I moved from MIT's Haystack Group to MIT's
             Visualization Group to work on Bluefish, a relational visualization
@@ -74,16 +74,14 @@ export const DataVis = () => {
           </p>
         </div>
         <div>
-          <h3 className="text-left">
-            Interactive Data Visualization & Society
-          </h3>
+          <h3>Interactive Data Visualization & Society</h3>
           <p>
             Having worked in the Visualization Group for a semester, I decided
             to take MIT's data visualization course in the spring of my junioar
             year. I wanted to become a bit more acquainted with the overall
             field and also to get some more practice actually creating
             visualizations. While I'll talk about some of the things I learned
-            through taking the course here, I also have a separate page just for
+            through taking the course here, I also have a separate page just for{" "}
             <Link to="/projects/migration-motivations" className={"text-link"}>
               my final project
             </Link>

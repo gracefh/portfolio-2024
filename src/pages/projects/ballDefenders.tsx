@@ -4,7 +4,19 @@ import { PageHeader } from "../../layout/pageHeader";
 export const BallDefenders = () => {
   return (
     <main>
-      <PageHeader title="Ball Defenders" />
+      <PageHeader
+        title="Ball Defenders"
+        subtitle={
+          <a
+            href="https://ball-defenders.vercel.app/"
+            target="_blank"
+            className="text-link"
+          >
+            https://ball-defenders.vercel.app/
+          </a>
+        }
+        image={"/image/project-previews/ball-defenders.png"}
+      />
       <article>
         <div>
           <p>
@@ -48,7 +60,7 @@ export const BallDefenders = () => {
             itself, though the overall game controls were put in other
             components. After initially throwing out the idea of doing this, it
             was cool to see it actually come together, though there were a
-            couple of pitfalls that I ran into. 
+            couple of pitfalls that I ran into.
           </p>
           <p>
             I think I was and am still pretty out of practice with using Svelte,
@@ -72,7 +84,8 @@ export const BallDefenders = () => {
             figure it out.
           </p>
           <p>
-            Nevertheless, the game is working, and you can try it out for yourself at the link above!
+            Nevertheless, the game is working, and you can try it out for
+            yourself at the link above!
           </p>
         </div>
       </article>
