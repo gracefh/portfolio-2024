@@ -18,7 +18,7 @@
 
   &:hover {
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(213, 80, 80, 0.2);
     background-blend-mode: screen;
     transition: var(--transition-hover);
   }

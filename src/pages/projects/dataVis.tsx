@@ -39,21 +39,21 @@ export const DataVis = () => {
             examples using Observable.
           </p>
           <ImageCarousel>
-          <div key={1}>
-            <img
-              className={"carousel-image"}
-              src={"/image/project-images/data-vis/ml-doc-charting-1.png"}
-              alt="prototypes for lab data visualization"
-            />
-          </div>
-          <div key={2}>
-            <img
-              className={"carousel-image"}
-              src={"/image/project-images/data-vis/ml-doc-charting-2.png"}
-              alt="line chart on D3"
-            />
-          </div>
-        </ImageCarousel>
+            <div key={1}>
+              <img
+                className={"carousel-image"}
+                src={"/image/project-images/data-vis/ml-doc-charting-1.png"}
+                alt="prototypes for lab data visualization"
+              />
+            </div>
+            <div key={2}>
+              <img
+                className={"carousel-image"}
+                src={"/image/project-images/data-vis/ml-doc-charting-2.png"}
+                alt="line chart on D3"
+              />
+            </div>
+          </ImageCarousel>
         </div>
         <div>
           <h3 className="text-left">Visualization Group</h3>
@@ -79,62 +79,63 @@ export const DataVis = () => {
           </h3>
           <p>
             Having worked in the Visualization Group for a semester, I decided
-            to take MIT's data visualization course, in order to become more
-            acquainted with the overall field and to get more practice creating
-            data visualizations, instead of mostly creating software to create
-            visualizations. Here, I'll detail a bit about what I learned overall
-            from the class and things I was able to create, though there also is
-            a separate page just for{" "}
+            to take MIT's data visualization course in the spring of my junioar
+            year. I wanted to become a bit more acquainted with the overall
+            field and also to get some more practice actually creating
+            visualizations. While I'll talk about some of the things I learned
+            through taking the course here, I also have a separate page just for
             <Link to="/projects/migration-motivations" className={"text-link"}>
               my final project
             </Link>
             .
           </p>
           <p>
-            Because I was taking the graduate version of the course, beyond the
-            normal course assignments, I also attended a weekly reading group.
-            There, I was able to read many papers on data visualization ethics,
-            which was extremely valuable, as I had not been exposed to many of
-            the concepts before.
+            As I was taking the graduate version of the class, I was able to
+            attend a weekly reading group, where we were assigned data
+            visualization-related papers to read every week. There, I was
+            exposed to a lot of new information about the ethics of data
+            visualizations. Before taking the class, I had mostly thought of
+            charts and diagrams as unbiased snapshots of the world. Through
+            reading some of these different papers, I realized how easy it was
+            to make visualizations that tell different stories, even off of the
+            same data set.
           </p>
           <p>
-            Additionally, in the first half of the semester, we were able to
-            complete multiple assignments and labs in order to both learn the
-            design thinking process in terms of data visualization and get
-            acquainted with useful tools for visualizing data, i.e. Tableau,
-            D3.js, and Mapbox.
+            In the main class, I also got to practice the design thinking
+            process through assignments and got acquainted to visualization
+            software, including Tableau, D3.js, and Mapbox.
           </p>
           <p>
-            Out of all the assignments we did, my favorite one was actually one
-            about misinformation in data visualization and how easy it is to
-            tell very different stories using the same piece of data. I think
-            that creating 2 visualizations that try to tell 2 very different
-            stories emphasized how important it is to be cognizant of the
-            potential impacts of visualizations and of the ethical choices that
-            people who create visualizations need to consider.
+            Out of all the assignments we did, my favorite one involved making
+            two visualizations with one dataset such that each visualization
+            made opposing arguments. I think that creating 2 visualizations that
+            try to tell 2 very different stories emphasized how important it is
+            to be cognizant of the potential impacts of visualizations and of
+            the ethical choices that people who create visualizations need to
+            consider.
           </p>
-          {/* <ImageCarousel>
-          <div>
-            <img
-              src={Visualization1}
-              alt="Visualization 1"
-              className={CarouselStyle.carouselImage}
-            />
-            <div className={CarouselStyle.carouselCaption}>
-              Misinformation Assignment, Visualization 1
+          <ImageCarousel>
+            <div>
+              <img
+                src={"/image/project-images/data-vis/visualization_1.png"}
+                alt="Visualization 1"
+                className={"carousel-image"}
+              />
+              <div className={"carousel-caption"}>
+                Misinformation Assignment, Visualization 1
+              </div>
             </div>
-          </div>
-          <div>
-            <img
-              src={Visualization2}
-              alt="Visualization 2"
-              className={CarouselStyle.carouselImage}
-            />
-          </div>
-          <div className={CarouselStyle.carouselCaption}>
-            Misinformation Assignment, Visualization 2
-          </div>
-        </ImageCarousel> */}
+            <div>
+              <img
+                src={"/image/project-images/data-vis/visualization_2.png"}
+                alt="Visualization 2"
+                className={"carousel-image"}
+              />
+              <div className={"carousel-caption"}>
+                Misinformation Assignment, Visualization 2
+              </div>
+            </div>
+          </ImageCarousel>
         </div>
       </article>
     </main>

@@ -6,7 +6,7 @@ export const mainProjects: Omit<ProjectCardProps, "ind">[] = [
     title: "Ball Defenders",
     date: "2024",
     description:
-      "A small passion project, born out of both the frustration and the fun I had playing the United Airlines game of similar name (Ball Defender) on a long, international flight",
+      "A small passion project, born out of both the frustration and the fun I had playing the United Airlines game of similar name on a long, international flight",
     route: "/projects/ball-defenders",
   },
   {
