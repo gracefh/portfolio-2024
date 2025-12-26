@@ -1,16 +1,23 @@
+import "./App.css";
 
-import './App.css';
-
-import { Outlet } from "react-router-dom";
-import { NavBar } from './layout/navBar';
-import { Footer } from './layout/footer';
+import { Outlet, useLocation } from "react-router-dom";
+import { NavBar } from "./layout/navBar";
+import { Footer } from "./layout/footer";
 
 function App() {
+  const location = useLocation();
+
   return (
     <div className="App">
-      <NavBar/>
-      <Outlet/>
-      <Footer/>
+      {location.pathname === "/" ? (
+        <Outlet />
+      ) : (
+        <>
+          <NavBar />
+          <Outlet />
+          <Footer />
+        </>
+      )}
     </div>
   );
 }

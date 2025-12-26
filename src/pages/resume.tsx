@@ -1,4 +1,6 @@
 import { ReactElement } from "react";
+import { PageHeader } from "../layout/pageHeader";
+import "./resume.css";
 
 export const ResumeItem = (props: {
   company: string;
@@ -39,7 +41,8 @@ export const ResumeSectionHeader = ({ name }: { name: string }) => {
 export const Resume = () => {
   return (
     <main>
-      <section>
+      <PageHeader title="Resume" />
+      <article className="resume--wrapper">
         <div>
           <ResumeSectionHeader name="experience" />
           <ResumeItem
@@ -49,12 +52,8 @@ export const Resume = () => {
             dates={"April 2025 - Present"}
             description={
               <ul>
-                <li>
-                  Managing 8 different engineers
-                </li>
-                <li>
-                  Leading 
-                </li>
+                <li>Managing 8 different engineers</li>
+                <li>Leading</li>
               </ul>
             }
           />
@@ -66,7 +65,8 @@ export const Resume = () => {
             description={
               <ul>
                 <li>
-                  Worked on features and projects on the core pages of our platform
+                  Worked on features and projects on the core pages of our
+                  platform
                 </li>
               </ul>
             }
@@ -212,7 +212,7 @@ export const Resume = () => {
             (singing, arranging, and beatboxing), Cooking + Baking, Capoeira
           </p>
         </div>
-      </section>
+      </article>
     </main>
   );
 };
