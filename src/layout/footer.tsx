@@ -35,7 +35,7 @@ export const Footer = () => {
       <div className="instrument-sans-400 text-black text-left dot-list">
         <div>Grace Huang</div>
         <i className="fa fa-solid fa-circle fa-4xs"></i>
-        <div>2025</div>
+        <div>2026</div>
       </div>
     </section>
   );

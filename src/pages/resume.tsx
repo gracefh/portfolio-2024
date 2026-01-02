@@ -49,11 +49,11 @@ export const Resume = () => {
             company={"Uncountable"}
             title={"Engineering Manager"}
             location={"San Francisco, CA"}
-            dates={"April 2025 - Present"}
+            dates={"Apr 2025 - Present"}
             description={
               <ul>
-                <li>Managing 8 different engineers</li>
-                <li>Leading</li>
+                <li>Managing 8 early-career engineers</li>
+                <li>Leading large project efforts on our core platform, as well as projects for potential customers</li>
               </ul>
             }
           />
@@ -61,11 +61,11 @@ export const Resume = () => {
             company={"Uncountable"}
             title={"Full-Stack Engineer"}
             location={"San Francisco, CA"}
-            dates={"Aug 2024 - April 2025"}
+            dates={"Aug 2024 - Apr 2025"}
             description={
               <ul>
                 <li>
-                  Worked on features and projects on the core pages of our
+                  Worked on full-stack features and projects on the core pages of our
                   platform
                 </li>
               </ul>
@@ -75,7 +75,7 @@ export const Resume = () => {
             company={"Hudson River Trading"}
             title={"Algorithmic Engineer Intern"}
             location={"New York, NY"}
-            dates={"May 2023 - August 2023"}
+            dates={"May 2023 - Aug 2023"}
             description={
               <ul>
                 <li>
@@ -118,7 +118,7 @@ export const Resume = () => {
               <ul>
                 <li>
                   Implemented a book builder and created trading signals, which
-                  were used in mock trading
+                  were then used in mock trading
                 </li>
               </ul>
             }
@@ -198,8 +198,7 @@ export const Resume = () => {
         <div>
           <ResumeSectionHeader name="skills + interests" />
           <p>
-            <b>Programming Languages + Frameworks:</b> Typescript, React,
-            Svelte, Vue.js, D3.js, HTML, CSS, Python, Git, LaTeX
+            <b>Programming Languages + Frameworks:</b> Typescript, React, Python, HTML, SQL
           </p>
           <p>
             <b>Design:</b> Adobe Illustrator, Figma, Adobe After Effects
@@ -208,8 +207,7 @@ export const Resume = () => {
             <b>World Languages:</b> English (Native), Chinese (Native)
           </p>
           <p>
-            <b>Interests:</b> Full-Stack Development, Design, A Cappella
-            (singing, arranging, and beatboxing), Cooking + Baking, Capoeira
+            <b>Interests:</b> Full-Stack Development, Design, Singing, Cooking, Capoeira
           </p>
         </div>
       </article>

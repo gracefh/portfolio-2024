@@ -5,7 +5,10 @@ import { ImageCarousel } from "../../components/imageCarousel";
 export const DataVis = () => {
   return (
     <main>
-      <PageHeader title="Data Visualization Work" image={"/image/project-previews/data-vis-preview.png"} />
+      <PageHeader
+        title="Data Visualization Work"
+        image={"/image/project-previews/data-vis-preview.png"}
+      />
       <article>
         <div>
           <p>
@@ -67,10 +70,11 @@ export const DataVis = () => {
           </p>
           <p>
             I also did research in the Visualization group from 2023 - 2024 for
-            my Master of Engineering degree. I worked on Twofish, an exploration
-            into improving the process of editing charts. The project extends
-            Bluefish and combines it with TLDraw, a whiteboard editing tool, to
-            create a graphical chart editor that considers spatial constraints.
+            my Master of Engineering degree. For my thesis, I explored improving
+            the process of creating and editing charts by allowing users to
+            specify spatial constraints. The project extends Bluefish and
+            combines it with TLDraw, a whiteboard editing tool, to create a
+            graphical chart editor that considers spatial constraints.
           </p>
         </div>
         <div>
